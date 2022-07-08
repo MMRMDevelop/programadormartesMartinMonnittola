@@ -3,8 +3,46 @@
     text-align: center;
     background-color: brown;
     color: yellow;
+    margin-left:20% ;
+    margin-right:20% ;
+    top:0;
+    left: 0;
 }
 
+.contenidoPrincipal{
+    display: inline-flex;
+}
+
+.bloqueDeDatos{
+    display: block;
+}
+
+.listaDeElementos{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 18px;
+    background-color: brown;
+    padding-right: 10px;
+}
+
+.lista{
+    display: none;
+    color: yellow;
+}
+
+.lista li{ 
+    padding-bottom: 7px;
+}
+
+.listaDeElementos:hover ul{
+    display: list-item;
+}
+
+
+#listaDeSecciones{
+    padding: 5px;
+}
 
 h3 {
     color: yellow;
@@ -25,12 +63,17 @@ div {
 }
 
 .image-property {
-    display:flex;
+    /*display:flex;*/
+    float: left;
     margin-left: auto;
     margin-right: auto;
     justify-content:center;
     align-items:flex-start;
-    
+    margin-top: 5%;
+    padding-bottom: 99%;
+    margin-bottom: 20%;
+    width: 3
+    0%;
 }
 
 .btn {
