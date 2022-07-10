@@ -29,6 +29,9 @@
 .lista{
     display: none;
     color: yellow;
+    position: sticky;
+    top: 10%;
+    left: 0%;
 }
 
 .lista li{ 
@@ -42,6 +45,9 @@
 
 #listaDeSecciones{
     padding: 5px;
+    position: sticky;
+    top: 0.5%;
+    left: 0%;
 }
 
 h3 {
