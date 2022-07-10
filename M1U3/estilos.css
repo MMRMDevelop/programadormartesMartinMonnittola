@@ -80,6 +80,22 @@ div {
     color: yellow;
 }
 
+.bloqueDeDatos li a:link {
+    color: brown;
+}
+
+.bloqueDeDatos li a:visited {
+    color: brown;
+}
+
+.botonFlotante a:visited {
+    color: brown;
+}
+
+.botonFlotante a:link {
+    color: brown;
+}
+
 
 .first-text {
     display: block;
