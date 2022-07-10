@@ -72,6 +72,15 @@ div {
     display: inline-flex;
 }
 
+.lista li a:visited {
+    color: yellow
+  }
+
+.lista li a:link {
+    color: yellow;
+}
+
+
 .first-text {
     display: block;
 }
