@@ -1,0 +1,173 @@
+
+#tituloCurriculum{
+    text-align: center;
+    background-color: brown;
+    color: yellow;
+    margin-left:20% ;
+    margin-right:20% ;
+    top:0;
+    left: 0;
+}
+
+.contenidoPrincipal{
+    display: inline-flex;
+}
+
+.bloqueDeDatos{
+    display: block;
+}
+
+.listaDeElementos{
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 18px;
+    background-color: brown;
+    padding-right: 10px;
+}
+
+.lista{
+    display: none;
+    color: yellow;
+    position: sticky;
+    top: 10%;
+    left: 0%;
+}
+
+.lista li{ 
+    padding-bottom: 7px;
+}
+
+.listaDeElementos:hover > ul{
+    display: list-item;
+}
+
+
+#listaDeSecciones{
+    padding: 5px;
+    position: sticky;
+    top: 0.5%;
+    left: 0%;
+}
+
+h3 {
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: brown;
+    box-shadow: 10px 11px 0px -4px rgba(0, 0, 0, 0.64);
+    -webkit-box-shadow: 10px 11px 0px -4px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 10px 11px 0px -4px rgba(0, 0, 0, 0.64);
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.29);
+}
+
+.botonFlotante{
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    box-shadow: 10px 11px 0px -4px rgba(0, 0, 0, 0.64);
+}
+
+
+div {
+    display: inline-flex;
+}
+
+.lista li a:visited {
+    color: yellow
+  }
+
+.lista li a:link {
+    color: yellow;
+}
+
+.bloqueDeDatos li a:link {
+    color: brown;
+}
+
+.bloqueDeDatos li a:visited {
+    color: brown;
+}
+
+.botonFlotante a:visited {
+    color: brown;
+}
+
+.botonFlotante a:link {
+    color: brown;
+}
+
+
+
+#organizacion:invalid{
+    border: 2px solid red;
+    border-radius: 4px;
+    color: #e74c3c;
+}
+
+
+#historialDeBusqueda{
+    padding-inline-start: 0px;
+}
+
+
+
+.first-text {
+    display: block;
+}
+
+.image-property {
+    display:flex;
+    /*float: left;*/
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    align-items:flex-start;
+    margin-top: 5%;
+    padding-bottom: 99%;
+    margin-bottom: 25%;
+    width: 30%;
+}
+
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .btn:hover, .btn:focus {
+    color:#3498db;
+    outline: 0;
+  }
+
+.third {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .third:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
