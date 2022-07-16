@@ -110,6 +110,39 @@ div {
 }
 
 
+.botonCacularDestino{
+    display: flex;
+    justify-content:center;
+    margin: 50px;
+}
+
+.botonCacularDestino > p {
+    color: #e74c3c  ;
+    text-align:center;
+    vertical-align:baseline;
+    text-align:center;
+    vertical-align:baseline;
+    margin-right: 10px;
+    font-weight:900;
+}
+
+
+
+.botonCacularDestino > .btn {
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.botonCacularDestino > input[type='number'] {
+    border-radius:10px;
+    border-color: #e74c3c;
+}
+
+.botonCacularDestino > input[type='number']::placeholder {
+    color: #e74c3c;
+    text-align:center;
+}
 
 .first-text {
     display: block;
@@ -149,7 +182,7 @@ div {
     font-weight: 400;
     line-height: 1;
     margin: 20px;
-    padding: 1.2em 2.8em;
+    padding: 1em 2em;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;

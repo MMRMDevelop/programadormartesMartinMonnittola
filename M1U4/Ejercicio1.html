@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
-    <script  id="scriptA" type="text/javascript">
+    <script id="scriptA" type="text/javascript">
         var globalInput = 0;
 
-        function calcularMetodoDeTransporte(inputValue){
+        function calcularMetodoDeTransporte(inputValue) {
 
             if (inputValue >= 0 && inputValue <= 1000) {
                 document.write("La distancia " + inputValue + " se debe recorrer a pie");
@@ -37,27 +37,21 @@
 
             var entrada = prompt("Ingrese la distancia metrica a clasificar")
 
-            if (entrada != "" &&  !(entrada === null)) {
+            if (entrada != "" && !(entrada === null)) {
                 globalInput = parseInt(entrada);
                 calcularMetodoDeTransporte(globalInput);
             } else {
                 globalInput = -1;
             }
-
-            /*for (let index = 0; index < array.length; index++) {
-                const element = array[index];
-                document.write("numero " + index + " " + inputValue);
-
-            }*/
         }
     </script>
 </head>
 
 <body onload="calcularValorprompt()">
-<script>
-    function calcularValorInput() {
+    <script>
+        function calcularValorInput() {
             var palabraDeEntrada = document.getElementById("inputDistancia");
-            if (palabraDeEntrada.value != "" && ! (palabraDeEntrada.value === null)) {
+            if (palabraDeEntrada.value != "" && !(palabraDeEntrada.value === null)) {
                 window.globalInput = parseInt(palabraDeEntrada.value);
                 console.log(window.globalInput);
                 calcularMetodoDeTransporte(window.globalInput);
@@ -66,7 +60,7 @@
             }
         }
 
-</script>
+    </script>
 
     <h1 id="tituloCurriculum">Transportes SA</h1>
     <div class="contenidoPrincipal">
@@ -135,12 +129,12 @@
                     Conicet).</li>
                 <li>Reconocimiento de Patrones (UBA 40 hs - Dr. Julio Jacobo)</li>
             </ul>
-
             <h3><a name="calcularDestino">Calcular Destino</a></h3>
-            <span> Ingresar la distancia : </span>
-            <input type="number" id="inputDistancia" name="inputDistancia">
-            <input type="submit" value="calcular" onclick="void calcularValorInput();">
-
+            <div class="botonCacularDestino">
+                <p><span> Ingresar la distancia : </span></p>
+                <input type="number" id="inputDistancia" name="inputDistancia"  min="0" placeholder="Recorrido en metros">
+                <input type="submit"  class="btn third"  value="calcular" onclick="void calcularValorInput();">
+            </div>
 
             <a name="sugerencias">
                 <h3>Sugerencias</h3>
@@ -233,7 +227,7 @@
                         placeholder="referenciaDeBusqueda">
                 </p>
                 <input id="formBoton" class="btn third" type="submit" value="Enviar">
-
+                    
             </form>
         </div>
         <div class="image-property">
