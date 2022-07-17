@@ -7,68 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
-    <script  id="scriptA" type="text/javascript">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="modal.css">
+    <script id="scriptA" type="text/javascript">
         var globalInput = 0;
 
-        function calcularMetodoDeTransporte(inputValue){
+        function calcularMetodoDeTransporte(inputValue) {
+            var pNodo = document.createElement('p');
+            pNodo.id = "ResultadoModalNodo";
+            var modalNodo = document.getElementsByClassName('modal-body')[0];
+
+            var historiaUlNodo = document.getElementById('historialDeBusqueda');
+            var liNodo = document.createElement('li');
+            liNodo.innerText = "valor : " + inputValue;
+            historiaUlNodo.appendChild(liNodo);
 
             if (inputValue >= 0 && inputValue <= 1000) {
-                document.write("La distancia " + inputValue + " se debe recorrer a pie");
+                //document.write("La distancia " + inputValue + " se debe recorrer a pie");
+                pNodo.innerText = "La distancia " + inputValue + " se debe recorrer a pie";
                 console.log("La distancia " + inputValue + " se debe recorrer a pie")
             } else if (inputValue > 1000 && inputValue <= 10000) {
-                document.write("La distancia " + inputValue + " se debe recorrer a bicicleta");
+                //document.write("La distancia " + inputValue + " se debe recorrer a bicicleta");
+                pNodo.innerText = "La distancia " + inputValue + " se debe recorrer a bicicleta";
                 console.log("La distancia " + inputValue + " se debe recorrer a bicicleta")
             } else if (inputValue > 10000 && inputValue <= 30000) {
-                document.write("La distancia " + inputValue + " se debe recorrer a colectivo");
+                //document.write("La distancia " + inputValue + " se debe recorrer a colectivo");
+                pNodo.innerText = "La distancia " + inputValue + " se debe recorrer a colectivo";
                 console.log("La distancia " + inputValue + " se debe recorrer a colectivo")
             } else if (inputValue > 30000 && inputValue <= 100000) {
-                document.write("La distancia " + inputValue + " se debe recorrer a auto");
+                //document.write("La distancia " + inputValue + " se debe recorrer a auto");
+                pNodo.innerText = "La distancia " + inputValue + " se debe recorrer a auto";
                 console.log("La distancia " + inputValue + " se debe recorrer a auto")
             } else if (inputValue > 100000) {
-                document.write("La distancia " + inputValue + " se debe recorrer a avion");
+                //document.write("La distancia " + inputValue + " se debe recorrer a avion");
+                pNodo.innerText = "La distancia " + inputValue + " se debe recorrer a avion";
                 console.log("La distancia " + inputValue + " se debe recorrer a avion")
             } else {
-                document.write("La distancia " + inputValue + " es invalida");
+                //document.write("La distancia " + inputValue + " es invalida");
+                pNodo.innerText = "La distancia " + inputValue + " es invalida";
                 console.log("La distancia " + inputValue + " es invalida")
             }
+            modalNodo.appendChild(pNodo);
         }
 
         function calcularValorprompt() {
 
             var entrada = prompt("Ingrese la distancia metrica a clasificar")
 
-            if (entrada != "" &&  !(entrada === null)) {
+            if (entrada != "" && !(entrada === null)) {
                 globalInput = parseInt(entrada);
                 calcularMetodoDeTransporte(globalInput);
+                modalDisplayInBlock();
             } else {
                 globalInput = -1;
             }
-
-            /*for (let index = 0; index < array.length; index++) {
-                const element = array[index];
-                document.write("numero " + index + " " + inputValue);
-
-            }*/
         }
     </script>
 </head>
 
 <body onload="calcularValorprompt()">
-<script>
-    function calcularValorInput() {
+    <script src="carousel.js"> </script>
+    <script src="modal.js"> </script>
+    <script>
+        function calcularValorInput() {
             var palabraDeEntrada = document.getElementById("inputDistancia");
-            if (palabraDeEntrada.value != "" && ! (palabraDeEntrada.value === null)) {
+            if (palabraDeEntrada.value != "" && !(palabraDeEntrada.value === null)) {
                 window.globalInput = parseInt(palabraDeEntrada.value);
                 console.log(window.globalInput);
                 calcularMetodoDeTransporte(window.globalInput);
+                modalDisplayInBlock();
             } else {
                 globalInput = -1;
             }
         }
+    </script>
 
-</script>
-
-    <h1 id="tituloCurriculum">Transportes SA</h1>
+    <h1 id="tituloPagina">Transportes SA</h1>
     <div class="contenidoPrincipal">
         <div class="listaDeElementos">
             <h3 id="listaDeSecciones">Lista de elementos</h3>
@@ -98,108 +112,80 @@
                     Destinos:
                 </a>
             </h3>
-            <div>
-                <div class="first-text">
-                    <ul>
-                        <li>Nombre y Apellido : Martin Maximiliano Roberto Monnittola</li>
-                        <li>Fecha de nacimiento : 31 de Diciembre de 1989</li>
-                        <li>D.N.I : 35018300</li>
-                        <li>Edad: 32</li>
-                        <li>Nacionalidad : Argentino</li>
-                        <li>Estado civil : Soltero</li>
-                        <li>Dirección : Justo J. de Urquiza 469 - B° Alta Córdoba – Ciudad de Córdoba - Córdoba</li>
-                        <li>Teléfono : 0351 152456536</li>
-                        <li>Teléfono alternativo : 03543 15626491</li>
-                        <li>Disponibilidad : Full time</li>
-                        <li>Email : martinmonnittola@gmail.com</li>
-                    </ul>
+            <div id="destino">
+                <div class="imagenDestino">
+                    <img src="montañas.jpg">
                 </div>
+
+                <div class="imagenDestino">
+                    <img src="petra.jpg">
+                </div>
+
+                <div class="imagenDestino">
+                    <img src="playas.jpg">
+                </div>
+
             </div>
 
             <h3><a name="ofertas">Ofertas</a></h3>
-            <ul>
-                <li>Licenciatura en Ciencias de la Computación (5° año en curso en
-                    <a href="https://www.famaf.unc.edu.ar/" target="_blank">FAMAF-UNC
-                    </a>)
-                </li>
-                <li>Programación Android</li>
-                <li>Redes y Sistemas Distribuidos</li>
-                <li>Base De Datos (base de datos relacionales) (240 hs – Famaf – Dr. Juan
-                    Duran - Conicet)</li>
-                <li>Ingeniería en software</li>
-                <li>Deep Learning</li>
-                <li>Redes Neuronales (Redes Feedforward fully-conected y Convulocionales -
-                    Redes Recurrentes y Sistemas dinamicos) Entrenamiento y Testing.
-                    (Famaf 60 hs – Dr. Francisco Tamarit - Conicet).</li>
-                <li>Aprendizaje por visión del computador (Famaf 120 hs – Dr. Jorge Sanchez-
-                    Conicet).</li>
-                <li>Reconocimiento de Patrones (UBA 40 hs - Dr. Julio Jacobo)</li>
-            </ul>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div id="Slide1" class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="cordoba.jpg" style="width:100%">
+                </div>
+
+                <div id="Slide2" class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="SanJuan.jpg" style="width:100%">
+                </div>
+
+                <div id="Slide3" class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="Misiones.jpg" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div id="stepsCirculos">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
 
             <h3><a name="calcularDestino">Calcular Destino</a></h3>
-            <span> Ingresar la distancia : </span>
-            <input type="number" id="inputDistancia" name="inputDistancia">
-            <input type="submit" value="calcular" onclick="void calcularValorInput();">
-
+            <div class="botonCacularDestino">
+                <p><span> Ingresar la distancia : </span></p>
+                <input type="number" id="inputDistancia" name="inputDistancia" min="0"
+                    placeholder="Recorrido en metros">
+                <input id="botonModal" type="submit" class="btn third" value="calcular"
+                    onclick="void calcularValorInput();">
+            </div>
 
             <a name="sugerencias">
                 <h3>Sugerencias</h3>
             </a>
-            <ol reversed>
-                <li><a href="https://www.globalprocessing.com.ar/" target="_blank">Global Processing</a> - Analista en
-                    Testing
-                    manual Semi Senior (1/2022 - Actualidad)
-                    <ul>
-                        <li>Azure</li>
-                        <li>Postman</li>
-                        <li>Scrum (Sprint y Planning semanales, Daily diaria, Retrospectiva cada dos semanas) </li>
-                    </ul>
-                </li>
-
-                <li><a href="http://www.arconsultores.com.ar/" target="_blank">Ar Consultores</a>– Analista en Testing
-                    manual -
-                    Semi Senior (8/2019 – 12/2021)
-                    Se continua trabajando para la empresa Claro
-                    <ul>
-                        <li>Tester automatizador Semi Senior.</li>
-                        <li>Automatizador de procesos Semi Senior (2 años de experiencia - Claro).</li>
-                        <li>Los mismas herramientas y actividades que en la empresa Cohen Sistemas.</li>
-                    </ul>
-                </li>
-
-                <li><a href="http://www.cohensistemas.com.ar/" target="_blank">Cohen Sistemas</a> – Analista en Testing
-                    (9/2018
-                    – 7/2019 )
-                    Causa: El contrato que tenía Claro con la consultora
-                    Cohen Sistemas fue rescindido.
-                    <ul>
-                        <li>Testing de Sistemas</li>
-                        <li>Testing Exploratorio</li>
-                    </ul>
-                <li><a href="https://arwebs.net/" target="_blank">Arwebs.net</a> – Backend Junior y Automatizador de
-                    procesos (
-                    6/2018 – 10/2018)
-                    <ul>
-                        <li>Automatizaciones de procesos (codificación en PHP - Laravel)</li>
-                        <li>Migración de base de datos (usando automatizaciones propias)</li>
-                        <li>Testeo y validación de migración</li>
-                        <li>Consultas interbases</li>
-                        <li>Corrección de inconsistencias</li>
-                        <li>Importación de datos (desde excel-csv, sql)</li>
-                        <li>Exportación de datos</li>
-                        <li>Mapeo objeto-relacion (ORM)</li>
-                        <li>Mapeo de formularios (entre aplicaciones de diferentes versiones)</li>
-                        <li>Gestor de base de datos: MySql, PhpMyAdmin y Workbench.</li>
-                        <li>Manejo de Git</li>
-                    </ul>
-                </li>
+            <ol reversed> Lugares reconocidos con eventos masivos actualmente :
+                <li> Cordoba </li>
+                <li> Buenas Aires</li>
+                <li> Petra </li>
+                <li> Jeruzalem</li>
             </ol>
 
             <a name="OtrosDatos">
                 <h3>OTROS DATOS DE INTERES</h3>
             </a>
-            <ul>
-                <li>Disponibilidad para viajar: Si</li>
+            <ul>Modo de pagos :
+                <li>Tarjeta de cretio / debito</li>
+                <li>Transferencias bancaria</li>
             </ul>
 
             <a name="FormularioDeContacto">
@@ -207,19 +193,19 @@
             </a>
             <form id="consulta" action="mailto:desarrollo.automation.test@gmail.com" method="POST">
                 <p>
-                    <label for="organizacion"> Organizacion o consultor interesado: </label>
-                    <input id="organizacion" name="Interesado" type="text" placeholder="Nombre de Organizacion">
+                    <label for="organizacion"> Nombre de Cliente : </label>
+                    <input id="organizacion" name="Interesado" type="text" placeholder="Nombre y Apellido">
                 </p>
                 <p>
-                    <label for="email"> Email de interesado : </label>
+                    <label for="email"> Email : </label>
                     <input id="email" name="EmailInteresado" type="email" placeholder="yyy@example.com" required>
                 </p>
                 <p>
                     <label for="motivo"> Motivo de Consulta</label>
                     <select id="motivo" name="motivoConsulta">
-                        <option value="Nueva Propuesta">Nueva Propuesta</option>
-                        <option value="Consulta de trabajos ateriores">Consulta de trabajos anteriores</option>
-                        <option value="Consulta de marco teorico academico">Consulta de marco teorico academico</option>
+                        <option value="Nueva Propuesta">Precios</option>
+                        <option value="Consulta de trabajos ateriores">Consulta de destinos</option>
+                        <option value="Consulta de marco teorico academico">Consulta de promociones</option>
                     </select>
                 </p>
                 <p>
@@ -227,22 +213,45 @@
                     <input id="fechaLimite" name="fechaLimiteRespuesta" type="datetime-local"
                         placeholder="yyy@example.com">
                 </p>
-                <p>
-                    <label for="referenciaDeBusqueda"> Referencia de busqueda : </label>
-                    <input id="referenciaDeBusqueda" name="referenciaDeBusquedaRespuesta" type="password"
-                        placeholder="referenciaDeBusqueda">
-                </p>
                 <input id="formBoton" class="btn third" type="submit" value="Enviar">
 
             </form>
         </div>
-        <div class="image-property">
-            <img src="refrencia_cv.jpg" alt="Foto de Curriculum Martin Monnittola" width="50%" height="70%">
+
+        <div class="listaDePlataformas">
+            <h3 id="plataformas">Presencia en Plataformas:</h3>
+            <ul class="lista">
+                <li>instagram</li>
+                <li>facebook</li>
+                <li>linkedin</li>
+                <li>skype</li>
+            </ul>
         </div>
+
     </div>
+
     <div class="botonFlotante">
         <a href="#top">arriba</a>
     </div>
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="void cerrarModal();">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <h2>Modal Footer</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
 </body>
 
 </html>
