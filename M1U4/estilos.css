@@ -1,23 +1,22 @@
-
-#tituloCurriculum{
+#tituloPagina {
     text-align: center;
     background-color: brown;
     color: yellow;
-    margin-left:20% ;
-    margin-right:20% ;
-    top:0;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 0;
     left: 0;
 }
 
-.contenidoPrincipal{
+.contenidoPrincipal {
     display: inline-flex;
 }
 
-.bloqueDeDatos{
+.bloqueDeDatos {
     display: block;
 }
 
-.listaDeElementos{
+.listaDeElementos {
     display: inline-flex;
     flex-direction: column;
     margin-right: 20px;
@@ -26,7 +25,7 @@
     padding-right: 10px;
 }
 
-.lista{
+.lista {
     display: none;
     color: yellow;
     position: sticky;
@@ -34,21 +33,44 @@
     left: 0%;
 }
 
-.lista li{ 
+.lista li {
     padding-bottom: 7px;
 }
 
-.listaDeElementos:hover > ul{
+.listaDeElementos:hover>ul {
     display: list-item;
 }
 
 
-#listaDeSecciones{
+.listaDePlataformas:hover>ul {
+    display: list-item;
+}
+
+#listaDeSecciones {
     padding: 5px;
     position: sticky;
     top: 0.5%;
     left: 0%;
 }
+
+
+#plataformas {
+    padding: 5px;
+    position: sticky;
+    top: 0.5%;
+    left: 0%;
+}
+
+.listaDePlataformas {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 18px;
+    background-color:  brown;
+    padding-left: 10px;
+}
+
+
 
 h3 {
     color: yellow;
@@ -60,10 +82,10 @@ h3 {
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.29);
 }
 
-.botonFlotante{
+.botonFlotante {
     position: fixed;
     top: 90%;
-    left: 90%;
+    left: 92.2%;
     box-shadow: 10px 11px 0px -4px rgba(0, 0, 0, 0.64);
 }
 
@@ -74,7 +96,7 @@ div {
 
 .lista li a:visited {
     color: yellow
-  }
+}
 
 .lista li a:link {
     color: yellow;
@@ -89,59 +111,80 @@ div {
 }
 
 .botonFlotante a:visited {
-    color: brown;
+    color: yellow;
 }
 
 .botonFlotante a:link {
-    color: brown;
+    color: yellow;
 }
 
 
 
-#organizacion:invalid{
+#organizacion:invalid {
     border: 2px solid red;
     border-radius: 4px;
     color: #e74c3c;
 }
 
 
-#historialDeBusqueda{
+#historialDeBusqueda {
     padding-inline-start: 0px;
 }
 
 
-.botonCacularDestino{
+.botonCacularDestino {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin: 50px;
 }
 
-.botonCacularDestino > p {
-    color: #e74c3c  ;
-    text-align:center;
-    vertical-align:baseline;
-    text-align:center;
-    vertical-align:baseline;
-    margin-right: 10px;
-    font-weight:900;
+
+#destino {
+    width: 100%;
+    height: 15%;
+    justify-content:center;
 }
 
+#destino > .imagenDestino{
+    max-width: 100%;    
+    max-height: 100%;
+}
 
+.imagenDestino > img {
+    width: 100%;
+    height: 100%;
+}
 
-.botonCacularDestino > .btn {
+.botonCacularDestino>p {
+    color: #e74c3c;
+    text-align: center;
+    vertical-align: baseline;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+.botonCacularDestino>.btn {
     margin-right: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.botonCacularDestino > input[type='number'] {
-    border-radius:10px;
+.botonCacularDestino>input[type='number'] {
+    border-radius: 10px;
     border-color: #e74c3c;
 }
 
-.botonCacularDestino > input[type='number']::placeholder {
+.botonCacularDestino>input[type='number']::placeholder {
     color: #e74c3c;
-    text-align:center;
+}
+
+input {
+    text-align: center;
+}
+
+
+option {
+    text-align: center;
 }
 
 .first-text {
@@ -149,12 +192,11 @@ div {
 }
 
 .image-property {
-    display:flex;
-    /*float: left;*/
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    justify-content:center;
-    align-items:flex-start;
+    justify-content: center;
+    align-items: flex-start;
     margin-top: 5%;
     padding-bottom: 99%;
     margin-bottom: 25%;
@@ -164,8 +206,8 @@ div {
 .btn {
     box-sizing: border-box;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: 2px solid #e74c3c;
     border-radius: 0.6em;
@@ -176,8 +218,8 @@ div {
     display: -ms-flexbox;
     display: flex;
     -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
@@ -188,11 +230,13 @@ div {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-  }
-  .btn:hover, .btn:focus {
-    color:#3498db;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #3498db;
     outline: 0;
-  }
+}
 
 .third {
     border-color: #3498db;
@@ -200,7 +244,8 @@ div {
     box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-  }
-  .third:hover {
+}
+
+.third:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
+}
