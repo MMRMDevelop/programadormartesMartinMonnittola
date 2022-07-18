@@ -178,10 +178,18 @@ div {
     color: #e74c3c;
 }
 
+.botonCacularDestino>input[type='text'] {
+    border-radius: 10px;
+    border-color: #e74c3c;
+}
+
+.botonCacularDestino>input[type='text']::placeholder {
+    color: #e74c3c;
+}
+
 input {
     text-align: center;
 }
-
 
 option {
     text-align: center;
